@@ -20,4 +20,7 @@ public interface AirportRepository extends JpaRepository<Airport, Long> {
     // Кастомный запрос: аэропорты с терминалом "A"
     @Query("SELECT a FROM Airport a WHERE :terminal MEMBER OF a.terminals")
     List<Airport> findAirportsByTerminal(String terminal);
+
+    boolean existsByIataCode(String iataCode);
+
 }
