@@ -27,6 +27,12 @@ public class User implements UserDetails {
 
     private String password;
 
+    // Новые поля для управления профилем
+    private String firstName;
+    private String lastName;
+
+    private String twoFactorSecret;
+
     @Enumerated(EnumType.STRING)
     private Role role;
 
